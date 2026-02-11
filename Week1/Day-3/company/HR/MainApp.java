@@ -1,4 +1,4 @@
-package HR;
+package hr;
 
 import company.Employee;
 import company.Company;
