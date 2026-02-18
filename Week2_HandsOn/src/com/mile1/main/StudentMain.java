@@ -15,7 +15,7 @@ public class StudentMain {
         data[3] = new Student("Manoj", null);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NullStudentException, NullMarksArrayException, NullNameException {
 
         StudentReport studentReport = new StudentReport();
         StudentService studentService = new StudentService();
@@ -23,11 +23,12 @@ public class StudentMain {
         System.out.println("Grades Calculation:");
 
         for (Student student : data) {
+            String grade;
             try {
-                String grade = studentReport.validate(student);
+                grade = studentReport.validate(student);
                 System.out.println("GRADE=" + grade);
-            } catch (NullNameException | NullMarksArrayException | NullStudentException e) {
-                System.out.println("GRADE=" + e);
+            } catch (NullMarksArrayException | NullNameException | NullStudentException e) {
+                grade = e.toString();
             }
         }
 

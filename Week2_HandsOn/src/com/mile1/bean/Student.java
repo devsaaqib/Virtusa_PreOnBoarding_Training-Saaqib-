@@ -2,7 +2,7 @@ package com.mile1.bean;
 
 public class Student {
     String name;
-    int marks[3];
+    int[] marks;
 
     public Student() {}
 

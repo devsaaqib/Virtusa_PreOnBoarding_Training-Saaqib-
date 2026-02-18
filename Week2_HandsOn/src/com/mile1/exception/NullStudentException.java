@@ -1,6 +1,6 @@
 package com.mile1.exception;
 
-public class NullStudentException {
+public class NullStudentException extends Exception {
     @Override
     public String toString() {
         return "NullStudentException Occured";
