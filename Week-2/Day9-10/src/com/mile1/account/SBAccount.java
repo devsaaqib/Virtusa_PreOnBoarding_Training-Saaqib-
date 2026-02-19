@@ -2,14 +2,15 @@ package com.mile1.account;
 
 public class SBAccount extends Account{
     String accountType;
+    double amount;
 
-    public SBAccount(int amount,String accountType) {
+    public SBAccount(double amount,String accountType) {
         this.amount=amount;
         this.accountType = accountType;
     }
 
     @Override
-    public double calculateIntrest() {
+    public double calculateInterest() {
         if (accountType.equalsIgnoreCase("Normal")){
             intrestRate=4;
         }

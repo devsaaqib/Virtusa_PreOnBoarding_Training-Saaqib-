@@ -4,7 +4,7 @@ public abstract class Account {
     double intrestRate;
     double amount;
 
-    public abstract double calculateIntrest();
-    }
+    public abstract double calculateInterest();
+
 }
 

@@ -1,16 +1,18 @@
 package com.mile1.account;
 
-public class FDAcount extends Account{
+public class FDAccount extends Account{
     int noOfDays;
     int age;
+    double amount;
 
-    public FDAcount(int noOfDays, int age) {
+    public FDAccount(double amount, int noOfDays, int age) {
         this.noOfDays = noOfDays;
         this.age = age;
+        this.amount=amount;
     }
 
     @Override
-    public double calculateIntrest() {
+    public double calculateInterest() {
         if (amount > 10000000){
             if (noOfDays>=7 && noOfDays<=14)
                 intrestRate= (age>=60) ?5.00 : 4.50;
